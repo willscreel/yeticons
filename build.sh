@@ -39,6 +39,7 @@ rm -rf $HOME/.local/share/icons/$THEME_NAME
 
 sed -i "s/Papirus/$THEME_NAME/g" Papirus/index.theme
 cp -r Papirus $HOME/.local/share/icons/$THEME_NAME
+gtk-update-icon-cache -f -t $HOME/.local/share/icons/$THEME_NAME
 
 git clean -fdx
 git reset --hard
