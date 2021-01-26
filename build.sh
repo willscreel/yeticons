@@ -35,6 +35,15 @@ find ./Papirus/22x22/panel -type f -name "*.svg" -exec sed -i"" -e "s/dfdfdf/$PA
 find ./Papirus/24x24/panel -type f -name "*.svg" -exec sed -i"" -e "s/dfdfdf/$PAPER_COLOR/g" {} +
 find ./Papirus/16x16/places -type f -name "*.svg" -exec sed -i"" -e "s/444444/$PAPER_COLOR/g" {} +
 
+# wrangle some of the bright red and green colors 
+find ./Papirus/16x16/panel -type f -name "*.svg" -exec sed -i"" -e "s/4caf50/$PAPER_COLOR/g" {} +
+find ./Papirus/22x22/panel -type f -name "*.svg" -exec sed -i"" -e "s/4caf50/$PAPER_COLOR/g" {} +
+find ./Papirus/24x24/panel -type f -name "*.svg" -exec sed -i"" -e "s/4caf50/$PAPER_COLOR/g" {} +
+find ./Papirus/16x16/panel -type f -name "*.svg" -exec sed -i"" -e "s/f44336/$PAPER_COLOR/g" {} +
+find ./Papirus/22x22/panel -type f -name "*.svg" -exec sed -i"" -e "s/f44336/$PAPER_COLOR/g" {} +
+find ./Papirus/24x24/panel -type f -name "*.svg" -exec sed -i"" -e "s/f44336/$PAPER_COLOR/g" {} +
+
+
 rm -rf $HOME/.local/share/icons/$THEME_NAME
 
 sed -i "s/Papirus/$THEME_NAME/g" Papirus/index.theme
